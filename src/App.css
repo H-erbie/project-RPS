@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    overflow: hidden;
+
+  }
+  .App {
+    background: radial-gradient(
+      134.34% 134.34% at 50% 0%,
+      #1f3757 0%,
+      #131537 100%
+    );
+  }
+  nav {
+    height: 100px;
+    left: 8%;
+    top: 48px;
+    border: 3px solid rgba(255, 255, 255, 0.289199);
+    @apply sm:h-28 md:h-32 lg:h-36 sm:top-2 lg:top-4 md:top-3 lg:left-1/4;
+  }
+  .btn {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.5px;
+  }
+  .btn:hover {
+    color: #3b4262;
+  }
+  .app-name {
+    width: 80px;
+    margin: auto 0;
+    @apply font-bold text-lg sm:text-xl md:text-2xl sm:h-3/5 lg:text-3xl leading-4 sm:leading-4  md:leading-5 lg:leading-6  text-white shadow-sm uppercase;
+  }
+  .nav-right {
+    background: linear-gradient(0deg, #f3f3f3 0%, #ffffff 100%);
+    height: 72px;
+    width: 80px;
+    text-align: center;
+    @apply font-bold;
+  }
+  .score {
+    color: #565468;
+  }
+  .buttons {
+    align-items: center;
+    z-index: 5;
+  }
+  .choices{
+    min-width: 350px;
+    @apply grid grid-cols-2 justify-center lg:mt-[2rem] gap-3 sm:gap-y-[1rem] sm:gap-x-[5rem]  place-items-center mx-auto relative
+
+  }
+  .opt-btn {
+    width: 129.37px;
+    height: 132.66px;
+    border-radius: 50%;
+    z-index: 2;
+    @apply relative cursor-pointer lg:w-[198px] lg:h-[203px] md:w-[170px] md:h-[170px]  sm:w-[150px] sm:h-[150px];
+  }
+  .btn-img {
+    width: 99.31px;
+    height: 94.1px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, #f3f3f3 0%, #dadada 98.34%);
+    @apply flex justify-center lg:w-[152px] lg:h-[144px] md:w-[122px] md:h-[124px] sm:w-[102px] sm:h-[104px] items-center;
+  }
+  .btn-img img {
+    width: 43.1px;
+    height: 52.28px;
+    @apply lg:w-[54px] lg:h-[80px]
+  }
+  .rule-head {
+    font-size: 32px;
+    line-height: 32px;
+    color: #3b4262;
+    font-weight: 700;
+  }
+  .op-round{
+    background-color: rgba(0,0,0,0.1);
+  }
+  .opt-btn::after {
+    content: "";
+    width: 153.37px;
+    height: 156.66px;
+    border-radius: 50%;
+    @apply flex justify-center absolute -top-3 sm:-left-[1.0rem] -left-3 lg:-top-[1.5rem] sm:-top-[1.2rem] lg:-left-[1.6rem] items-center bg-white lg:w-[252px] lg:h-[248px] sm:w-[182px] sm:h-[188px] md:w-[202px] md:h-[208px] opacity-0 hover:opacity-5 transition duration-500;
+  }
+  .modal {
+    transition: 0.5s ease;
+    @apply h-screen w-screen sm:p-0 sm:justify-center sm:bg-[rgba(0,0,0,0.6)] z-10 absolute top-0 -left-[200%] bg-white text-center flex flex-col justify-start py-20 gap-20 items-center;
+  }
+  .show {
+    left: 0;
+  }
+  .info-btn-img {
+    width: 81.66px;
+    height: 82.09px;
+    @apply flex items-center justify-center;
+    background: #e1e4ed;
+    border-radius: 50%;
+  }
+  .rock-icon{
+    transform: scale(2)
+  }
+  .info-btn-img img {
+    width: 36.11px;
+    height: 43.2px;
+  }
+  .info-btn {
+    @apply flex items-center justify-center;
+    background: #b1b4c5;
+    border-radius: 50%;
+    width: 107.37px;
+    height: 109.63px;
+  }
+  .status{
+    transition: 0.5s ease;
+    @apply absolute scale-[0] bottom-[8rem] sm:bottom-[3rem]
+  }
+  #opaque{
+    @apply after:opacity-5
+  }
+  /* .buttons::before {
+    content: "";
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 140px solid black;
+    position: absolute;
+    opacity: 0.2;
+  } */
+  /* .buttons::after {
+    content: "";
+    background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 100px solid #1f3757 ;
+    position: absolute;
+    top: 5.2rem;
+  } */
+
+  .inner {
+    width: 129.37px;
+    height: 126.78px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    @apply flex justify-center items-center lg:w-[198px] lg:h-[194px] md:w-[168px] md:h-[164px] sm:w-[148px] sm:h-[144px];
+  }
+  .rock {
+    background-color: #9d1634;
+  }
+  .rock .inner {
+    background-color: #db2e4d;
+  }
+  .paper {
+    background-color: #2a45c2;
+  }
+  .paper .inner {
+    background-color: #4664f4;
+  }
+  .scissors {
+    background-color: #c76c1b;
+  }
+  .scissors .inner {
+    background-color: #eb9f0e;
+  }
+}
