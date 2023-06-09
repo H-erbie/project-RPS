@@ -19,14 +19,14 @@ const Options = () => {
         <div
           className={
             !clickBtn
-              ? "choices before:content-[''] before:border-l-[140px] lg:before:border-l-[240px]  before:border-l-transparent before:border-r-[140px] lg:before:border-r-[240px] before:border-r-transparent before:border-t-[140px] lg:before:border-t-[240px] before:absolute before:border-t-black before:opacity-20 after:content-['']  after:border-r-[100px] lg:after:border-r-[180px] after:border-r-transparent after:border-t-[100px] lg:after:border-t-[180px] after:border-t-[#1f3757] after:absolute lg:after:top-[7.3rem] after:top-[5.3rem] top-[5rem] md:after:top-[7.8rem]  after:border-l-[100px] lg:after:border-l-[180px] after:border-l-transparent sm:after:top-[6.5rem]"
+              ? "choices before:content-[''] before:border-l-[140px] lg:before:border-l-[240px]  before:border-l-transparent before:border-r-[140px] lg:before:border-r-[240px] before:border-r-transparent before:border-t-[140px] lg:before:border-t-[240px] before:absolute before:border-t-black before:opacity-20 after:content-['']  after:border-r-[100px] lg:after:border-r-[180px] after:border-r-transparent after:border-t-[100px] lg:after:border-t-[180px] after:border-t-[#1f3757] after:absolute lg:after:top-[7.3rem] after:top-[5.3rem] top-[0rem] md:after:top-[7.8rem]  after:border-l-[100px] lg:after:border-l-[180px] after:border-l-transparent sm:after:top-[6.5rem]"
               : "choices before:content-[''] before:w-full before:h-full before:absolute before:left-0 before:top-0 before:bg-transparent before:z-[3]"
           }
         >
           {buttons.map((item) => {
             const { id, name, img } = item;
             return (
-              <div
+              <button
                 key={id}
                 className={
                   !clickBtn && name === "rock"
@@ -41,7 +41,7 @@ const Options = () => {
                     <img src={img} alt={name} />
                   </div>
                 </div>
-              </div>
+              </button>
             );
           })}
           {clickBtn && (
@@ -50,7 +50,7 @@ const Options = () => {
                 houseChoice.map((item) => {
                   const { id, name, img } = item;
                   return (
-                    <div
+                    <button
                       key={id}
                       className={
                         stat === false
@@ -63,7 +63,7 @@ const Options = () => {
                           <img src={img} alt={name} />
                         </div>
                       </div>
-                    </div>
+                    </button>
                   );
                 })}
             </div>

@@ -14,7 +14,7 @@ const RulesModal = () => {
       </div>
       <FaTimes
         onClick={closeRules}
-        className="text-4xl absolute bottom-10 right-[50%] sm:top-6 sm:right-5 cursor-pointer text-gray-400"
+        className="text-4xl absolute bottom-[6rem] right-[50%] sm:top-6 sm:right-5 cursor-pointer text-gray-400"
       />
     </div>
     </div>
