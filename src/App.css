@@ -123,7 +123,7 @@
   }
   .status{
     transition: 0.5s ease;
-    @apply absolute scale-[0] bottom-[8rem] sm:bottom-[3rem]
+    @apply absolute scale-[0] bottom-[5rem] sm:bottom-[3rem]
   }
 
   #opaque{
