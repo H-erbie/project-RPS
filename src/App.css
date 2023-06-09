@@ -53,7 +53,7 @@
     z-index: 5;
   }
   .choices{
-    min-width: 350px;
+    min-width: 300px;
     @apply grid grid-cols-2 justify-center lg:mt-[2rem] gap-3 sm:gap-y-[1rem] sm:gap-x-[5rem]  place-items-center mx-auto relative
 
   }
